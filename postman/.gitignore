@@ -1,0 +1,4 @@
+# Postman files
+*.postman_environment.json
+*.postman_collection.json
+postman/
