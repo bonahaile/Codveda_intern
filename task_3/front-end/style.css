@@ -1,0 +1,124 @@
+:root {
+    --bg-color: #F7F6F2;
+    --card-bg: #FFFFFF;
+    --text-main: #3F4F44;
+    --primary: #05C475;
+    --primary-hover: #069f5f;
+    --error-bg: #ffebee;
+    --error-text: #c62828;
+    --radius: 12px;
+    --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    padding: 2rem 1rem;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.header p {
+    color: #667085;
+    margin-bottom: 1.25rem;
+}
+
+/* Button Styles */
+.btn {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: var(--radius);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn:hover {
+    background-color: var(--primary-hover);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/* States (Loading / Error) */
+.hidden {
+    display: none !important;
+}
+
+.loading {
+    text-align: center;
+    font-weight: 500;
+    color: #667085;
+    margin: 2rem 0;
+}
+
+.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    padding: 1rem;
+    border-radius: var(--radius);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+/* Responsive Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+}
+
+/* Dynamic Card Component */
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text-main);
+}
+
+.card p {
+    color: #667085;
+    font-size: 0.95rem;
+}
