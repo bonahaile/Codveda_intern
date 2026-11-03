@@ -10,8 +10,18 @@ app.use(express.json());
 let products = [
   { id: 1, name: 'Laptop', price: 1200, category: 'Electronics' },
   { id: 2, name: 'Coffee Maker', price: 80, category: 'Appliances' },
-  { id: 3, name: 'Running Shoes', price: 110, category: 'Sports' }
+  { id: 3, name: 'Running Shoes', price: 110, category: 'Sports' },
+  { id: 4, name: 'Smartphone', price: 800, category: 'Electronics' },
+  { id: 5, name: 'Blender', price: 60, category: 'Appliances' },
+  { id: 6, name: 'Tennis Racket', price: 150, category: 'Sports' },
+  { id: 7, name: 'Headphones', price: 200, category: 'Electronics' },
+  { id: 8, name: 'Microwave', price: 120, category: 'Appliances' },
+  { id: 9, name: 'Basketball', price: 30, category: 'Sports' },
+  { id: 10, name: 'Tablet', price: 400, category: 'Electronics' },
+  { id: 11, name: 'Toaster', price: 40, category: 'Appliances' },
+  { id: 12, name: 'Yoga Mat', price: 25, category: 'Sports' }
 ];
+
 app.apiName = 'Products API';
 app.get('/api/products', (req, res) => {
   res.status(200).json({
